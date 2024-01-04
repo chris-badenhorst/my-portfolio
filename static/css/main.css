@@ -1,0 +1,38 @@
+.profile-picture {
+  max-width: 150px;
+  max-height: 150px;
+}
+.social-icon {
+  width: 30px;
+  height: 20px;
+  margin: 5px; /* Adjust the margin value as needed */
+  color: white;
+
+  margin-top: 10px;
+}
+.social-icons a {
+  text-decoration: none; /* Remove underlines */
+}
+.icon-container {
+  background-color: gray;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.side-div {
+  margin-top: 10px;
+  color: white;
+}
+.side-link-text {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.side-link-text:hover {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+i {
+  margin-right: 5px;
+}

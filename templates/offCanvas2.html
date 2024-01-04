@@ -1,0 +1,162 @@
+{% load static %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<style>
+  {% comment %} body {
+    padding-top: 56px; /* Adjust based on your navbar height */
+  } {% endcomment %}
+
+  {% comment %} @media (min-width: 768px) {
+    body {
+      padding-top: 0;
+    } {% endcomment %}
+
+    #sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      padding-top: 3.5rem; /* Adjust based on your navbar height */
+      padding-left: 1.5rem;
+      overflow-x: hidden;
+      overflow-y: auto;
+      border-right: 2px solid #dee2e6; /* Optional: Add a border */
+    }
+
+    {% comment %} #content {
+      margin-left: 260px; /* Adjust based on your sidebar width */
+    } {% endcomment %}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-md-none">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Your Brand</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <!-- Add more navigation links as needed -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col">
+    <!-- Sidebar (Hidden on small screens) -->
+    <div
+      id="sidebar"
+      class="col-md-3 col-lg-3 col-xl-2 d-none d-md-block flex-column bg-dark text-white"
+    >
+      <div class="text-center">
+        <img
+          class="profile-picture img-fluid"
+          src="{% static 'images/profile-picture (2).jpg' %}"
+          alt="Profile Picture"
+        />
+        <h2 class="px1">Chris Badenhorst</h2>
+        <div
+          class="social-icons d-flex justify-content-center align-items-center px-1"
+        >
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="a-icon"
+          >
+            <div class="icon-container">
+              <i class="fa fa-twitter social-icon" aria-hidden="true"></i>
+            </div>
+          </a>
+
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="a-icon"
+          >
+            <div class="icon-container">
+              <i class="fa fa-facebook social-icon" aria-hidden="true"></i>
+            </div>
+          </a>
+
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="a-icon"
+          >
+            <div class="icon-container">
+              <i class="fa fa-instagram social-icon" aria-hidden="true"></i>
+            </div>
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="a-icon"
+          >
+            <div class="icon-container">
+              <i class="fa fa-linkedin social-icon" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="conatiner">
+        <div class="side-div">
+          <a class="side-link-text" href="#"
+            ><i class="fa fa-home" aria-hidden="true"></i>Home</a
+          >
+        </div>
+        <div class="side-div">
+          <a class="side-link-text" href="#"
+            ><i class="fa fa-user" aria-hidden="true"></i>About</a
+          >
+        </div>
+        <div class="side-div">
+          <a class="side-link-text" href="#"
+            ><i class="fa fa-file" aria-hidden="true"></i>Resume</a
+          >
+        </div>
+        <div class="side-div">
+          <a class="side-link-text" href="#"
+            ><i class="fa fa-book" aria-hidden="true"></i>Blog</a
+          >
+        </div>
+        <div class="side-div">
+          <a class="side-link-text" href="#"
+            ><i class="fa fa-book" aria-hidden="true"></i>Projects</a
+          >
+        </div>
+        <div class="side-div">
+          <a class="side-link-text" href="#"
+            ><i class="fa fa-envelope" aria-hidden="true"></i>Contact</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <h1>Your Content</h1>
+    <!-- Add your main content here -->
+  </div>
+</div>

@@ -1,0 +1,101 @@
+{%extends 'main.html'%}{% load static %}
+
+<style>
+  body {
+    padding-top: 56px; /* Adjust based on your navbar height */
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding-top: 0;
+    }
+
+    #sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      padding-top: 3.5rem; /* Adjust based on your navbar height */
+      padding-left: 1.5rem;
+      overflow-x: hidden;
+      overflow-y: auto;
+      border-right: 1px solid #dee2e6; /* Optional: Add a border */
+    }
+
+    #content {
+      margin-left: 260px; /* Adjust based on your sidebar width */
+    }
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-md-none">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Your Brand</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <!-- Add more navigation links as needed -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar (Hidden on small screens) -->
+      <div id="sidebar" class="col-md-3 d-none d-md-block">
+        <ul class="nav flex-column align-items-center">
+          <div class="conatiner">
+            <img
+              class="profile-picture img-fluid"
+              src="{% static 'images/profile-picture (2).jpg' %}"
+              alt="Profile Picture"
+            />
+          </div>
+
+          <div class="">
+            <h3>Chris Badenhorst</h3>
+          </div>
+          <div class="list-group list-group-flush" style="width: 200px">
+            <a href="#" class="list-group-item list-group-item-action active"
+              >home</a
+            >
+            <a href="#" class="list-group-item list-group-item-action">about</a>
+            <a href="#" class="list-group-item list-group-item-action">blog</a>
+            <a href="#" class="list-group-item list-group-item-action"
+              >projects</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >contact</a
+            >
+          </div>
+        </ul>
+      </div>
+      <div id="content">
+        <!-- Page content goes here -->
+        <div class="container">
+          <h1>Your Content</h1>
+          <!-- Add your main content here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
